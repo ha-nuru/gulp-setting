@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대백화점 면세점 2023 개선 파일 리스트</title>
+    <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css" />
+    <style>
+        * {box-sizing: border-box;}
+        .head {display: flex; align-items: center; width: 100%; height: 45px; padding: 0 20px; background-color: #c41315; color: #fff; font-size: 18px;}
+        .content {padding: 30px 20px;}
+        .list-file {width: 100%; border-top: 2px solid #1b1e23; font-size: 15px;}
+        .list-file li {display: flex; border-top: 1px solid #ccd1d8;}
+        .list-file .type-head {border-top: none; background-color: #5c6677; color: #fff;}
+        .list-file span {padding: 10px; text-align: center;}
+        .list-file .link {text-align: left;}
+        .list-file .device {width: 6%}
+        .list-file .menu {width: 10%}
+        .list-file .language {width: 6%}
+        .list-file .link {width: 25%}
+        .list-file .start-day {width: 10%}
+        .list-file .finish-day {width: 10%}
+        .list-file .status {width: 6%}
+        .list-file .note {flex-grow: 2;}
+        @media screen and (max-width: 1024px) {
+            .list-file li {flex-wrap: wrap;}
+            .list-file span {white-space: nowrap;}
+            .list-file .device {width: 20%}
+            .list-file .menu {width: 20%}
+            .list-file .language {width: 15%}
+            .list-file .link {width: 45%}
+            .list-file .start-day {width: 20%}
+            .list-file .finish-day {width: 20%}
+            .list-file .status {width: 15%}
+            .list-file .note {width: 45%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">파일 리스트</div>
+        <div class="content">
+            <ul class="list-file">
+                <li class="type-head">
+                    <span class="device mo-none">device</span>
+                    <span class="menu">menu</span>
+                    <span class="language">언어</span>
+                    <span class="link">링크</span>
+                    <span class="start-day">작업 시작일</span>
+                    <span class="finish-day">작업 완료일</span>
+                    <span class="status">상태</span>
+                    <span class="note">비고</span>
+                </li>
+                <li>
+                    <span class="device mo-none">모바일</span>
+                    <span class="menu">햄버거</span>
+                    <span class="language">국문</span>
+                    <span class="link"><a href="./ko/hamburger.html" target="_blank">./ko/hamburger.html</a></span>
+                    <span class="start-day">2023/04/03</span>
+                    <span class="finish-day">2023/04/06</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+                <li>
+                    <span class="device"></span>
+                    <span class="menu"></span>
+                    <span class="language">중문</span>
+                    <span class="link"><a href="./cn/hamburger.html" target="_blank">./cn/hamburger.html</a></span>
+                    <span class="start-day">2023/04/10</span>
+                    <span class="finish-day">2023/04/11</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+                <li>
+                    <span class="device"></span>
+                    <span class="menu"></span>
+                    <span class="language">영문</span>
+                    <span class="link"><a href="./en/hamburger.html" target="_blank">./en/hamburger.html</a></span>
+                    <span class="start-day">2023/04/10</span>
+                    <span class="finish-day">2023/04/06</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+                <li>
+                    <span class="device"></span>
+                    <span class="menu">메인</span>
+                    <span class="language">국문</span>
+                    <span class="link"><a href="./ko/m_main.html" target="_blank">./ko/m_main.html</a></span>
+                    <span class="start-day">2023/04/03</span>
+                    <span class="finish-day">2023/04/26</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+                <li>
+                    <span class="device"></span>
+                    <span class="menu"></span>
+                    <span class="language">중문</span>
+                    <span class="link"><a href="./cn/m_main.html" target="_blank">./cn/m_main.html</a></span>
+                    <span class="start-day">2023/04/25</span>
+                    <span class="finish-day">2023/04/26</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+                <li>
+                    <span class="device"></span>
+                    <span class="menu"></span>
+                    <span class="language">영문</span>
+                    <span class="link"><a href="./en/m_main.html" target="_blank">./en/m_main.html</a></span>
+                    <span class="start-day">2023/04/25</span>
+                    <span class="finish-day">2023/04/26</span>
+                    <span class="status">제출</span>
+                    <span class="note"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        checkDay();
+        function checkDay() {
+            const _days = document.querySelectorAll('.finish-day');
+            const _today = new Date();
+            Array.from(_days, day => {
+                const _start =  Math.ceil((new Date(day.parentNode.querySelector('.start-day').innerHTML) - _today) / (1000 * 60 * 60 * 24));
+                const _diff = Math.floor((_today - new Date(day.innerHTML)) / (1000 * 60 * 60 * 24));
+            })
+        }
+    </script>
+</body>
+</html>

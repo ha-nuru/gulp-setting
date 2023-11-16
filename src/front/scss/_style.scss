@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.st{
+    color: red;
+    .ls{
+        font-size: 18px;
+    }
+}
+
+.main-swiper{
+    border: 1px solid red;
+    .swiper-slide{
+       background: #ccc;
+    }
+}
