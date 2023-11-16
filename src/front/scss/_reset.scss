@@ -1,0 +1,42 @@
+// font ellipsis
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    } @else {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $line;
+    }
+  }
+
+// background
+  @mixin background($url, $x, $y, $width, $height) {
+    background-image: url($url);
+    background-position: ($x) ($y);
+    background-size: $width $height;
+  }
+
+// media query
+$devices: (
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 1280px
+);
+
+@mixin mq($device) {
+  @if map-has-key($devices, $device) {
+    $device-width: map-get($devices, $device);
+    @media screen and (min-width: #{$device-width}) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$device}.';
+  }
+}
+
+
+
