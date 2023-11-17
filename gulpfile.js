@@ -88,7 +88,7 @@ function clean() {
 }
 //images
 function optimizeimg() {
-  return src(`${_src}/front/images/**/*`)
+  return src(`${_src}/front/images/*`)
     .pipe(
       imagemin([
         imagemin.mozjpeg({ quality: 90, progressive: true }),
@@ -100,7 +100,7 @@ function optimizeimg() {
 
 //webp images
 function webpImage() {
-  return src(`${front}/images/**/*`)
+  return src(`${front}/images/*`)
     .pipe(imagewebp())
     .pipe(dest(`${front}/images`));
 }
@@ -122,18 +122,18 @@ function watchTask() {
   watch(`${_src}/front/scss/*.scss`).on("change", compilescss);
   watch(`${_src}/front/scss/**/n/*.scss`).on("change", compilescss);
   watch(`${_src}/front/js/**/*.js`).on("change", jsmin);
-  watch([`${_src}/front/images/**/*`, `${_src}/front/images/**/**/*`]).on(
+  watch([`${_src}/front/images/*`, `${_src}/front/images/*`]).on(
     "change",
     optimizeimg
   );
-  watch(`${_src}/front/images/**/**/*`).on("change", optimizeimg);
-  watch(`${_src}/front/images/**/*`).on("change", optimizeimg);
-  watch([`${_src}/front/images/**/*`, `${_src}/front/images/**/**/*`]).on(
+  watch(`${_src}/front/images/*`).on("change", optimizeimg);
+  watch(`${_src}/front/images/*`).on("change", optimizeimg);
+  watch([`${_src}/front/images/*`, `${_src}/front/images/*`]).on(
     "change",
     webpImage
   );
-  watch(`${_src}/front/images/**/*`).on("change", webpImage);
-  watch(`${_src}/front/images/**/**/*`).on("change", webpImage);
+  watch(`${_src}/front/images/*`).on("change", webpImage);
+  watch(`${_src}/front/images/*`).on("change", webpImage);
 }
 
 //default gulp

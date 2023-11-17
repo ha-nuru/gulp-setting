@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+$color-gray-1: #e5e5e5;
+$color-gray-2: #dde0e5;
+$color-gray-3: #f9fafb;
+$color-gray-4: #bababa;
+$color-gray-5: #d9d9d9;
+$color-gray-6: #666;
+$color-gray-7: #ddd;
+$color-gray-8: #242424;
+$color-gray-9: #f4f5f6;
+$color-gray-10: #fafbfc;
+$color-gray-11: #f7f7f7;
+$color-gray-12: #eef0f2;
+$color-gray-13: #ebebeb;
+$color-gray-14: #f5f7fa;
+$color-gray-15: #dee0e5;
+$color-red-1: #ff0000;
+$color-red-2: #ea2829;
+$color-red-3: #ea2869;
+$color-red-4: #f4511e;
+$color-blue-1: #0288d1;
+$color-blue-2: #0F0143;
+$color-purple-1: #C44FF7;
+$color-purple-2: #A148F5;
+$color-purple-3: #733FF3;
+$font-color-1: #788497;
+$font-color-2: #1b1e23;
+$font-color-3: #ccd1d8;
+$font-color-4: #abb2be;
+$font-color-5: #4e5765;
+$font-color-6: #5c6677;
+$font-color-7: #f1f6ff;
+$font-color-8: #3d444f;
+$color-white: #fff;
+$color-black: #000;
+
+$font-family-2: -apple-system-font, Apple SD Gothic Neo, Helvetica, sans-serif;
+$font-family-1: 'Noto Sans KR', $font-family-2;
+$font-family-3: "Times New Roman", "Times", Serif;
+
+$img-ko-url: '/front/images/M_KO';
+$img-en-url: '/front/images/M_EN';
+$img-cn-url: '/front/images/M_CN';
+
+$img-pc-ko-url: '/front/images/KO';
+$img-pc-en-url: '/front/images/EN';
+$img-pc-cn-url: '/front/images/CN';
+
+$sWide: "screen and (min-width : 520px)";
+$wide: "screen and (min-width : 600px)";
+$fold: "screen and (min-width : 650px)";
+$narrow: "screen and (max-width : 320px)";
