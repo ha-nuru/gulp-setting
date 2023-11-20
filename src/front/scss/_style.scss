@@ -1,4 +1,3 @@
-
 section {
   max-width: 1600px;
   width: 100%;
@@ -12,36 +11,67 @@ section {
   &.section06 {
     background-color: $color-blue-2;
     .txt-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px 0;
-        color: $color-white;
-        .tit{
-            width: 100%;
-            font-size: toRem(50);
-        }
-        .txt{
-            width: 100%;
-            font-size: toRem(20);
-            line-height: 35px;
-        }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px 0;
+      color: $color-white;
+      .tit {
+        width: 100%;
+        font-size: toRem(50);
+      }
+      .txt {
+        width: 100%;
+        font-size: toRem(20);
+        line-height: 35px;
+      }
     }
   }
 }
 
 //section03 - img rolling banner
 .img-rolling-banner {
+  display: flex;
   overflow-x: hidden;
   margin-top: 154px;
   ul {
     display: flex;
     gap: 0 50px;
+    &.default {
+      animation: rollingbanner01 33s linear infinite;
+    }
+    &.clone {
+      animation: rollingbanner02 33s linear infinite;
+    }
   }
   .chat-img {
     width: 500px;
   }
   &.active {
+  }
+}
+
+@keyframes rollingbanner01 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rollingbanner02 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

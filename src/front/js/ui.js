@@ -26,9 +26,16 @@ function swiper() {
 //section03 - img rolling banner
 
 function sec3() {
-  let roller = document.querySelector(".img-rolling-banner");
+  let roller = document.querySelector(".img-rolling-banner ul");
   roller.id = "roller1";
   let clone = roller.cloneNode(true);
-  document.querySelector(".section").appendChild(clone);
+  clone.id = "roller2";
+  document.querySelector(".img-rolling-banner").appendChild(clone);
   document.querySelector("#roller1").style.left = "0";
+  document.querySelector("#roller2").style.left = document.querySelector(
+    ".img-rolling-banner ul"
+  );
+
+  roller.classList.add("default");
+  clone.classList.add("clone");
 }
