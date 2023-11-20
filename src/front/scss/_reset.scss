@@ -1,35 +1,54 @@
-*{
+@use "sass:math";
+
+
+* {
   margin: 0;
   padding: 0;
 }
 
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+// .scroll-lock{
+
+// }
+
+
+// font units px to rem
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;	
+ @return $remValue;
+}
+
 // font ellipsis
 @mixin ellipsis($line: 1) {
-    @if ($line == 1) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    } @else {
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: $line;
-    }
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
   }
+}
 
 // background
-  @mixin background($url, $x, $y, $width, $height) {
-    background-image: url($url);
-    background-position: ($x) ($y);
-    background-size: $width $height;
-  }
+@mixin background($url, $x, $y, $width, $height) {
+  background-image: url($url);
+  background-position: ($x) ($y);
+  background-size: $width $height;
+}
 
 // media query
 $devices: (
   mobile: 320px,
   tablet: 768px,
-  desktop: 1280px
+  desktop: 1280px,
 );
 
 @mixin mq($device) {
@@ -42,6 +61,3 @@ $devices: (
     @warn 'Invalid breakpoint: #{$device}.';
   }
 }
-
-
-

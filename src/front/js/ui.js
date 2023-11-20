@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   swiper();
+  sec3();
 });
 
 // swiper
@@ -20,4 +21,14 @@ function swiper() {
       el: ".swiper-scrollbar",
     },
   });
+}
+
+//section03 - img rolling banner
+
+function sec3() {
+  let roller = document.querySelector(".img-rolling-banner");
+  roller.id = "roller1";
+  let clone = roller.cloneNode(true);
+  document.querySelector(".section").appendChild(clone);
+  document.querySelector("#roller1").style.left = "0";
 }

@@ -1,23 +1,47 @@
 
-section{
-    max-width: 1600px;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 0 auto;
-    &.fullbg{
-        color: $color-blue-2;
+section {
+  max-width: 1600px;
+  width: 100%;
+  height: 100vh;
+  padding: 150px 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  &.fullbg {
+    max-width: 100%;
+  }
+  &.section06 {
+    background-color: $color-blue-2;
+    .txt-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px 0;
+        color: $color-white;
+        .tit{
+            width: 100%;
+            font-size: toRem(50);
+        }
+        .txt{
+            width: 100%;
+            font-size: toRem(20);
+            line-height: 35px;
+        }
     }
+  }
 }
-
-
 
 //section03 - img rolling banner
-.img-rolling-banner{
-    .chat-img{
-        width: 500px;
-    }
-    &.active{
-
-    }
+.img-rolling-banner {
+  overflow-x: hidden;
+  margin-top: 154px;
+  ul {
+    display: flex;
+    gap: 0 50px;
+  }
+  .chat-img {
+    width: 500px;
+  }
+  &.active {
+  }
 }
-
