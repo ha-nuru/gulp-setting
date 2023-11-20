@@ -9,12 +9,14 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/front/js/gsap.min.js"></script>
+    <script src="/front/js/ScrollTrigger.min.js"></script>
     <script src="/front/js/ui.js"></script>
     <title>DXchart</title>
   </head>
   <body>
     <div class="wrap">
-      <section class="section section06 fullbg">
+      <section class="section section03 fullbg">
         <div class="txt-box">
           <strong class="tit">다양한 차트 풍부한 라이브러리</strong>
           <p class="txt">
@@ -32,6 +34,34 @@
           </ul>
         </div>
       </section>
+      <section class="section section04">
+        <div class="inner">
+          <div class="txt-box">
+            <strong class="tit">NEXACRO N 호환 지원</strong>
+            <p class="txt">
+              NEXACRO 개발 및 운영환경에 최적화되어<br />
+              NEXACRO NRE 및 WRE를 지원하며, 크로스 브라우저 호환성을<br />
+              채택하여 다양한 환경에서 사용할 수 있습니다.<br />
+            </p>
+          </div>
+          <div class="img-box">
+            <img src="/front/images/img_desktop.png" alt="" />
+            <img src="/front/images/img_chrome.png" alt="" />
+            <img src="/front/images/img_edge.png" alt="" />
+            <img src="/front/images/img_firefox.png" alt="" />
+            <img src="/front/images/img_opera.png" alt="" />
+            <img src="/front/images/img_safari.png" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        motion03();
+      });
+
+      // img banner section06
+      function motion03() {}
+    </script>
   </body>
 </html>

@@ -5,28 +5,33 @@ section {
   padding: 150px 20px;
   margin: 0 auto;
   box-sizing: border-box;
+  background-color: $color-white;
+  .txt-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px 0;
+    color: $color-white;
+    .tit {
+      width: 100%;
+      font-size: toRem(50);
+    }
+    .txt {
+      width: 100%;
+      font-size: toRem(20);
+      line-height: 35px;
+    }
+  }
   &.fullbg {
     max-width: 100%;
   }
-  &.section06 {
+  &.section03 {
     background-color: $color-blue-2;
-    .txt-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 40px 0;
-      color: $color-white;
-      .tit {
-        width: 100%;
-        font-size: toRem(50);
-      }
-      .txt {
-        width: 100%;
-        font-size: toRem(20);
-        line-height: 35px;
-      }
-    }
+  }
+  .inner{
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -49,6 +54,22 @@ section {
     width: 500px;
   }
   &.active {
+  }
+}
+
+// section04
+.section04 {
+  .img-box{
+    width: 706px;
+    height: 462px;
+    background: url('/front/images/img_browser.png') no-repeat;
+  }
+  .txt-box {
+    text-align: left;
+    .tit,
+    .txt {
+      color: $color-black;
+    }
   }
 }
 
