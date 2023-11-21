@@ -1,9 +1,12 @@
 @use "sass:math";
 
-
 * {
   margin: 0;
   padding: 0;
+}
+
+body{
+  font-family: $font-family-1;
 }
 
 ul li {
@@ -11,10 +14,14 @@ ul li {
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+  color: $color-black;
+}
+
 // .scroll-lock{
 
 // }
-
 
 // font units px to rem
 @function toRem($value) {

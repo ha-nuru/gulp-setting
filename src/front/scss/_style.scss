@@ -29,9 +29,10 @@ section {
   &.section03 {
     background-color: $color-blue-2;
   }
-  .inner{
+  .inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -59,16 +60,35 @@ section {
 
 // section04
 .section04 {
-  .img-box{
+  .img-box {
     width: 706px;
     height: 462px;
-    background: url('/front/images/img_browser.png') no-repeat;
+    background: url("/front/images/img_browser.png") no-repeat;
   }
   .txt-box {
     text-align: left;
+    align-items: flex-start;
     .tit,
     .txt {
       color: $color-black;
+    }
+  }
+  .btn-detail {
+    display: inline-block;
+    &::after {
+      content: "";
+      width: 45px;
+      height: 24px;
+      background: url("/front/images/btn_arrow01.png") no-repeat center center;
+    }
+  }
+  .img-box {
+    ul {
+      position: relative;
+      width: 100%;
+    }
+    li {
+      
     }
   }
 }
