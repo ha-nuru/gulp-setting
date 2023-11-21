@@ -48,23 +48,23 @@
             >
           </div>
           <div class="img-box">
+            <div class="img_desktop">
+              <img src="/front/images/img_desktop.png" alt="" />
+            </div>
             <ul>
-              <li>
-                <img src="/front/images/img_desktop.png" alt="" />
-              </li>
-              <li style="--i:0">
+              <li style="--i: 0">
                 <img src="/front/images/img_firefox.png" alt="" />
               </li>
-              <li style="--i:4">
+              <li style="--i: 1">
                 <img src="/front/images/img_safari.png" alt="" />
               </li>
-              <li style="--i:3">
+              <li style="--i: 2">
                 <img src="/front/images/img_chrome.png" alt="" />
               </li>
-              <li style="--i:1">
+              <li style="--i: 3">
                 <img src="/front/images/img_edge.png" alt="" />
               </li>
-              <li style="--i:3">
+              <li style="--i: 4">
                 <img src="/front/images/img_opera.png" alt="" />
               </li>
             </ul>
@@ -74,11 +74,22 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        motion03();
+        motion04();
       });
 
-      // img banner section06
-      function motion03() {}
+      // 로딩 시 스크롤 초기화
+      ScrollTrigger.clearScrollMemory();
+
+      // img banner section03
+      function motion04() {
+        const browsers = document.querySelector(".img-box ul");
+        ScrollTrigger.create({
+          markers: true,
+          start: "top bottom",
+          trigger: ".section04",
+          toggleClass: { targets: browsers, className: "active" },
+        });
+      }
     </script>
   </body>
 </html>

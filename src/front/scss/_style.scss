@@ -63,7 +63,7 @@ section {
   .img-box {
     width: 706px;
     height: 462px;
-    background: url("/front/images/img_browser.png") no-repeat;
+    background: url("/front/images/img_browser.png") no-repeat 50px center;
   }
   .txt-box {
     text-align: left;
@@ -74,21 +74,82 @@ section {
     }
   }
   .btn-detail {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    color: $color-purple-3;
+    font-weight: bold;
     &::after {
       content: "";
+      display: block;
       width: 45px;
       height: 24px;
-      background: url("/front/images/btn_arrow01.png") no-repeat center center;
+      background: url("/front/images/btn_arrow01.png") no-repeat;
+      background-size: contain;
     }
   }
   .img-box {
+    position: relative;
+    .img_desktop {
+      width: 500px;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
     ul {
       position: relative;
       width: 100%;
-    }
-    li {
-      
+      height: 100%;
+      li {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        &:nth-of-type(1) {
+          left: 0;
+          bottom: 0;
+        }
+        &:nth-of-type(2) {
+          left: 7%;
+          bottom: 45%;
+        }
+        &:nth-of-type(3) {
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+        }
+        &:nth-of-type(4) {
+          right: 7%;
+          bottom: 45%;
+        }
+        &:nth-of-type(5) {
+          right: 0;
+          bottom: 10%;
+        }
+      }
+      &.active {
+        li {
+          opacity: 1;
+          display: block;
+          animation: opacityevent 800ms linear;
+          &:nth-of-type(1) {
+            animation-duration: 0.5s;
+            bottom: 10%;
+          }
+          &:nth-of-type(2) {
+            animation-duration: 0.6s;
+          }
+          &:nth-of-type(3) {
+            animation-duration: 0.7s;
+          }
+          &:nth-of-type(4) {
+            animation-duration: 0.8s;
+          }
+          &:nth-of-type(5) {
+            animation-duration: 0.9s;
+          }
+        }
+      }
     }
   }
 }
@@ -114,5 +175,14 @@ section {
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+
+@keyframes opacityevent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
